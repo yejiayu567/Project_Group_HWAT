@@ -1,7 +1,5 @@
 # import modules
-import cash_on_hand
-import overheads
-import profit_loss
+import cash_on_hand, overheads, profit_loss
 
 
 # call function from adder module
