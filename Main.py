@@ -1,15 +1,16 @@
-# import cash_on_hand, overheads, profit_loss
-# from utils.read_data import read_data
+# import 3 modules
+import cash_on_hand, overheads, profit_loss
 
-# def main():
+def main():
+    """
+    - This function will call functions from adder modules
+    - No parameter is needed
+    """
 
-#     cash_on_hand_data = read_data('csv_reports/cash-on-hand.csv')
-#     overheads_data = read_data('csv_reports/Overheads.csv')
-#     profit_loss_data = read_data('csv_reports/profit-and-loss.csv')
-    
-#     overheads.overhead_function(overheads_data)
-#     cash_on_hand.coh_function(cash_on_hand_data)
-#     profit_loss.profitloss_function(profit_loss_data)
+    filename = 'summary_report.txt'
+    overheads.Overhead_Function(filename)
+    cash_on_hand.COH_Function(filename)
+    profit_loss.Profit_Loss_Function(filename)
 
-    
-# main()
+# Execute the function
+main()
