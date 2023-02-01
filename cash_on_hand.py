@@ -37,4 +37,4 @@ def COH_Function(filename):
     # if the data is surplus, return the statement to the txt file)
     if is_surplus:
         with open(filename, mode='a') as f:
-            f.write("[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY" + "\n"
+            f.write("[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY" + "\n")
