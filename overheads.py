@@ -30,4 +30,4 @@ def Overhead_Function(filename):
             
     # write the statement to the txt file
     with open(filename, mode='w') as f:
-        f.write(f"[HIGHEST OVERHEADS] {max_category.upper()}: {max_overheads}%" +'\n'
+        f.write(f"[HIGHEST OVERHEADS] {max_category.upper()}: {max_overheads}%" +'\n')
