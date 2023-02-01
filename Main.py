@@ -7,9 +7,9 @@ import profit_loss
 # call function from adder module
 def main():
     filename = 'summary_report.txt'
-    overheads.overhead_function(filename)
-    cash_on_hand.coh_function(filename)
-    profit_loss.profit_loss_function(filename)
+    overheads.Overhead_Function(filename)
+    cash_on_hand.COH_Function(filename)
+    profit_loss.Profit_Loss_Function(filename)
 
 
 main()
