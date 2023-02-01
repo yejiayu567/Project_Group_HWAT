@@ -25,14 +25,19 @@ def COH_Function(filename):
     sorted(data)
     # determine whether the data is surplus
     is_surplus = True
+     #setting a for loop that will run through the data in data list by finding the number of elements by len(data)
     for index in range(len(data) - 1):
         # find the deficit data and calculate the difference 
         if data[index + 1][1] < data[index][1]:
+            # if net profit of the next day is less than the net profit of the current day, is surplus will return false
             is_surplus = False
+            # finding the day value for the next row of data
             day = data[index + 1][0]
+            # calculating the difference between the net profit of two consecutive days, and assigning it to the variable diff
             diff = data[index][1] - data[index + 1][1]
             # write the statement in the txt file
             with open(filename, mode='a') as f:
+                # append to the end of the txt file
                 f.write(f'[CASH DEFICIT] DAY: ({day}:.1f), AMOUNT: USD{diff}')
     # if the data is surplus, return the statement to the txt file)
     if is_surplus:
