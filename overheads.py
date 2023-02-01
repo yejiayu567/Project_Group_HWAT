@@ -6,7 +6,7 @@ def Overhead_Function(filename):
     """
     This function will find the highest overheads and category
     One parameter is required: filename
-    ""
+    """
 
     # read csv file
     with open('csv_reports/overheads.csv') as file:
