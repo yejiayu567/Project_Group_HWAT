@@ -40,7 +40,7 @@ def COH_Function(filename):
                 # append to the end of the txt file
                 f.write(f'[CASH DEFICIT] DAY: ({day}:.1f), AMOUNT: USD{diff}')
                 
-    # if the data is surplus, return the statement to the txt file)
+    # if the data is surplus, return the statement to the txt file
     if is_surplus:
         with open(filename, mode='a') as f:
             f.write("[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY" + "\n")
