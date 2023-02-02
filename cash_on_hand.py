@@ -1,4 +1,4 @@
-# import required modules
+# import required module
 import csv
 
 
@@ -19,17 +19,17 @@ def COH_Function(filename):
         data = []
         # iterate each row with loop
         for row in data:
-            # append cash on hand data as a list back to each empty list
+            # append cash on hand data as a list back to the empty list
             data.append([(row[0]), float(row[1])])
     # sort the data by date
     sorted(data)
     # determine whether the data is surplus
     is_surplus = True
-     #setting a for loop that will run through the data in data list by finding the number of elements by len(data)
+    # setting a for loop that will run through the data in data list by finding the number of elements by len(data)
     for index in range(len(data) - 1):
-        # find the deficit data and calculate the difference 
+        # Set a conditionals that will find the deficit data and calculate the difference 
         if data[index + 1][1] < data[index][1]:
-            # if net profit of the next day is less than the net profit of the current day, is surplus will return false
+            # if net profit of the next day is less than the net profit of the current day, is_surplus will return false
             is_surplus = False
             # finding the day value for the next row of data
             day = data[index + 1][0]
@@ -39,6 +39,7 @@ def COH_Function(filename):
             with open(filename, mode='a') as f:
                 # append to the end of the txt file
                 f.write(f'[CASH DEFICIT] DAY: ({day}:.1f), AMOUNT: USD{diff}')
+                
     # if the data is surplus, return the statement to the txt file)
     if is_surplus:
         with open(filename, mode='a') as f:
