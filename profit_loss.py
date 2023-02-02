@@ -18,14 +18,13 @@ def Profit_Loss_Function(filename):
         # create empty lists to store value
         data = []
         # iterate each row with loop
-        # 
         for row in reader:
             data.append([(row[0]), (float(row[4]))])
     # sort the data by date
     sorted(data)
     # determine whether the data is surplus
     surplus = True
-    #setting a for loop that will run through the data in data list by finding the number of elements by len(data)
+    # setting a for loop that will run through the data in data list by finding the number of elements by len(data)
     for index in range(len(data) - 1):
         # check if the net profit of the next day (data[index + 1][1]) is less than the net profit of the current day (data[index][1]).
         if data[index + 1][1] < data[index][1]:
