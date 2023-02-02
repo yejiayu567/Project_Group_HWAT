@@ -4,7 +4,7 @@ import csv
 
 def Overhead_Function(filename):
     """
-    This function will find the highest overheads and category
+    This function will find the highest overheads and its category
     One parameter is required: filename
     """
 
@@ -21,7 +21,7 @@ def Overhead_Function(filename):
             data.append([(row[0]), (float(row[1]))])
     # setting max_category to keep track of the day when the highest value of the net profit occurred
     max_category = data[0][0]
-    #  setting max_overheads to keep track of the highest value of the net profit
+    # setting max_overheads to keep track of the highest value of the net profit
     max_overheads = data[0][1]
     # iterate each data with loop
     for index in range(1, len(data)):
